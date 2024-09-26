@@ -171,7 +171,7 @@ const Entities: React.FC<EntitiesProps> = ({ structureslist, selectedList, check
 
     // For filtering entities - used in search
     const handleFilteredChange = useCallback((filtered: string[]) => {
-        let object: EntitiesGroup = {};
+        const object: EntitiesGroup = {};
         Object.keys(structures).forEach((key) => {
             object[key] = {};
             Object.keys(structures[key]).forEach((key2) => {
