@@ -13,8 +13,6 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, }) => {
-    if (!isOpen) return null; // Don't render if not open
-
     const [currentNumber, setCurrentNumber] = useState(1); // Default to 1
     const [groupName, setGroupName] = useState('');
     const [structures, setStructures] = useState<Record<string, string[]>>({});
