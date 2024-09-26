@@ -31,7 +31,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, }) => {
         if (currentNumber === 2) {
             setBackButton('Cancel');
         }
-        if (currentNumber === 4) {
+        else if (currentNumber === 4) {
             setNextButton('Next');
         }
         setCurrentNumber((prev) => prev > 1 ? prev - 1 : prev);
@@ -42,7 +42,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, }) => {
         if (currentNumber === 1) {
             setBackButton('Go Back');
         }
-        if (currentNumber === 3) {
+        else if (currentNumber === 3) {
             setNextButton('Create Group');
         }
         setCurrentNumber((prev) => prev < 4 ? prev + 1 : prev);
