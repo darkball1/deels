@@ -13,6 +13,7 @@ const EntityItem: React.FC<{
     handleRoleSelectionChange: (structure: string, role: string) => void;
     openDropdown: string | null;
     toggleDropdown: (structure: string) => void;
+    dropdownRef: React.RefObject<HTMLDivElement>;
 }> = ({
     structureName,
     country,
@@ -23,7 +24,8 @@ const EntityItem: React.FC<{
     handleCheckboxChange,
     handleRoleSelectionChange,
     openDropdown,
-    toggleDropdown
+    toggleDropdown,
+    dropdownRef
 }) => {
         return (
             <div className='flex items-center flex-col'>
@@ -51,7 +53,7 @@ const EntityItem: React.FC<{
                             </svg>
                         </button>
                         {openDropdown === `${structureName}-${item}` && (
-                            <div className="absolute z-10 ml-[-112px] w-[224px] rounded-md bg-white shadow-lg">
+                            <div ref={dropdownRef} className="absolute z-10 ml-[-112px] w-[224px] rounded-md bg-white shadow-lg">
                                 <ul role="menu">
                                     {roles.map((role) => (
                                         <li key={role} className="flex px-[8px] py-[2px]">

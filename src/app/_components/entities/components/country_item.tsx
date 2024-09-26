@@ -17,6 +17,7 @@ const CountryItem: React.FC<{
     handleRoleSelectionChange: (structure: string, role: string) => void;
     openDropdown: string | null;
     toggleDropdown: (structure: string) => void;
+    dropdownRef: React.RefObject<HTMLDivElement>;
 }> = ({
     structureName,
     country,
@@ -29,7 +30,8 @@ const CountryItem: React.FC<{
     handleCheckboxChange,
     handleRoleSelectionChange,
     openDropdown,
-    toggleDropdown
+    toggleDropdown,
+    dropdownRef
 }) => {
         return (
             <>
@@ -63,6 +65,7 @@ const CountryItem: React.FC<{
                         handleRoleSelectionChange={handleRoleSelectionChange}
                         openDropdown={openDropdown}
                         toggleDropdown={toggleDropdown}
+                        dropdownRef={dropdownRef}
                     />
                 ))}
             </>

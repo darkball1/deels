@@ -1,3 +1,5 @@
+import { RefObject } from "react";
+
 export interface EntitiesGroup {
     [key: string]: {
         [country: string]: string[]; // This allows any country name as a key
@@ -25,5 +27,6 @@ export interface StructureItemProps extends StructureListProps {
     countries: Record<string, string[]>;
     openDropdown: string | null;
     toggleDropdown: (structure: string) => void;
+    dropdownRef: RefObject<HTMLDivElement>;
 }
 

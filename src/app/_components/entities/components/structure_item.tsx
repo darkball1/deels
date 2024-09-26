@@ -20,7 +20,8 @@ const StructureItem: React.FC<StructureItemProps> = ({
     handleCheckboxChange,
     handleRoleSelectionChange,
     openDropdown,
-    toggleDropdown
+    toggleDropdown,
+    dropdownRef
 }) => {
     return (
         <>
@@ -58,11 +59,11 @@ const StructureItem: React.FC<StructureItemProps> = ({
                     handleRoleSelectionChange={handleRoleSelectionChange}
                     openDropdown={openDropdown}
                     toggleDropdown={toggleDropdown}
+                    dropdownRef={dropdownRef}
                 />
             ))}
         </>
     );
 };
-
 
 export default StructureItem

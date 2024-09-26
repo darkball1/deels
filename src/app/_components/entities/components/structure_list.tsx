@@ -15,6 +15,7 @@ const StructureList: React.FC<StructureListProps> = (props) => {
 
     // Close dropdown if clicked outside
     const handleClickOutside = useCallback((event: MouseEvent) => {
+
         if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
             setOpenDropdown(null); // Hide dropdown if clicked outside
         }
@@ -40,6 +41,7 @@ const StructureList: React.FC<StructureListProps> = (props) => {
                         {...props}
                         openDropdown={openDropdown}
                         toggleDropdown={toggleDropdown}
+                        dropdownRef={dropdownRef}
                     />
                 </div>
             ))}
